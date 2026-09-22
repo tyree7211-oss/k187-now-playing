@@ -18,7 +18,11 @@ app.all("/update", (req, res) => {
     req.query.song;
 
   if (song && String(song).trim()) {
-    nowPlaying = String(song).trim();
+  try {
+  nowPlaying = decodeURIComponent(String(song).replace(/\+/g, " ")).trim();
+} catch {
+  nowPlaying = String(song).trim();
+}
     console.log("Now Playing:", nowPlaying);
   }
 
