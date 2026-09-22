@@ -1,0 +1,12 @@
+{
+  "name": "k187-now-playing",
+  "version": "1.0.0",
+  "description": "K187 Radio Now Playing overlay",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
